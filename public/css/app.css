@@ -1,4 +1,80 @@
-/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+@font-face {
+    font-family: FontAwesome;
+    src: url('fontawesome-webfont.ttf');
+}
+
+@font-face {
+    font-family: blackjack;
+    src: url('blackjack.otf');
+}
+
+html{}
+
+body{
+  font-family:sans-serif !important;
+  background-image: url(../images/bg22.gif);
+  background-repeat: repeat-y repeat-x;;
+  background-size:100%;
+
+}
+
+.my-nav{
+  width:100%;
+  height:130px;
+  padding-top:20px;
+  /*background-image: url('../images/bg13.png');*/
+  /*background-size:100%;*/
+  margin-bottom:1em;
+}
+
+.my-nav2{
+  width:100%;
+  height:50px;
+  font-size:110%;
+  color:white;
+  text-shadow: 1px 1px 1px black;
+}
+
+.my-nav2-list{
+  list-style-type: none;
+  width:450px;
+  padding-left: 0;
+  height:inherit;
+  margin:auto;
+}
+
+.my-nav2-list li{
+  display:inline;
+  margin:0 15px;
+}
+
+.my-nav2-list a{
+  color: white;
+  font-size: 80%;
+}
+
+.my-nav2-list a:hover{
+  color:white;
+
+}
+
+.my-logo a:hover{
+  color:#206020;
+  text-decoration:none;
+  text-shadow: 1px 1px 1px black;
+
+}
+
+.my-logo a {
+  display:block;
+  text-align: center;
+  text-decoration: none;
+  font-family: blackjack !important;
+  font-size: 400%;
+  color:white;
+  text-shadow: 1px 1px 1px black;
+}
+
 .footer{
   height:50px;
   background:#e7e7e7;
@@ -6,6 +82,8 @@
 
 .single-comment{
   list-style-type: none;
+  color:white;
+  text-shadow: 1px 1px 1px black;
 }
 
 .comment-body{
@@ -28,7 +106,7 @@
 .info-box{
   margin:auto;
   /*border:1px solid grey;*/
-  width:30%;
+  width:100%;
   padding:1em 2em 1em;
   text-align: center;
 }
@@ -37,26 +115,168 @@
   list-style-type: none;
 }
 
-.blog-post{
-  box-shadow: 1px 1px 5px #888888 !important;
-  padding:0.5em;
-  width:40%;
-  margin: 0.5em auto;
+.box{
+  margin-top:5em;
 }
 
+.single-post{
+  color:white;
+  text-shadow:1px 1px 1px black;
+}
+
+.post-dtl{
+  margin-top:2em;
+  width:75%;
+}
+
+.single-post h4{
+  width:50%;
+}
+
+.blog-post{
+  padding:0.5em;
+  width:33%;
+  margin: 0.5em auto;
+  float:left;
+  width:25%
+  color:white;
+  font-size:125%;
+}
+
+.blog-post-wrapper{
+  width:75%;
+  margin:auto;
+  margin-top:3em;
+}
+
+.blog-post-wrapper:hover{
+  transform: scale(0.95);
+  transition: transform 1s;
+}
+
+.container-wrapper{
+  width:75%;
+}
+
+.post-title{
+  color: white;
+  margin-bottom:0;
+  font-weight: bold;
+  font-size:140%;
+  text-shadow:1px 1px 1px black ;
+  font-family:blackjack;
+
+}
+
+.subtitle{
+  font-size:75%;
+  color:#FFF845;
+  text-shadow: 1px 1px 1px black;
+}
+
+.post-body{
+  margin-top: 10px;
+  color:white !important;
+  font-size:85%;
+  text-shadow: 1px 1px 1px black;
+}
+.view-link{
+  padding-left:10em;
+  font-size: 80%;
+}
+
+.view-link button {
+  padding: 2px 15px;
+  border-radius:7px;
+  background-color:#3C763D;
+  box-shadow: 0px 0px 10px grey;
+  border:none;
+}
+
+.comment-link{
+  padding: 2px 15px;
+  border-radius:7px;
+  background-color:#3C763D;
+  box-shadow: 0px 0px 10px grey;
+  border:none;
+}
+
+.comment-link:hover{
+  color:white !important;
+  background-color:darkgreen;
+}
+
+.comment-title{
+  text-align: center;
+  color:darkgreen;
+  text-shadow: 1px 1px 1px white;
+}
+
+.view-link button:hover, .view-link a:hover{
+  background-color: darkgreen;
+  color:white;
+  text-decoration:none;
+  /*text-shadow: 1px 1px 1px black;*/
+}
 .comments{
   width:50%;
   margin:0 auto;
+  color:white;
+  text-shadow:1px 1px 1px black;
+
 }
 
 .comments .input-group{
   margin:auto;
+  color:black;
+}
+
+.login{
+  color:white;
+  text-shadow: 1px 1px 1px black;
+  margin-top:3em;
+}
+
+.login-1{
+  float:left;
+  margin:5em;
+}
+
+.login-2{
+  float:left;
+  border-left: 1px solid yellow;
+  padding:5em;
+}
+
+.contact-front{
+  color:white;
+  text-shadow: 1px 1px 1px black;
+}
+
+.contact-front input, .contact-front textarea{
+  color: black;
+}
+
+.contact-sub{
+  background-color: darkgreen;
+  margin: 2em 30em;
+}
+
+.contact-sub:hover{
+  color:white !important;
+  background-color: #004d00;
 }
 
 .paginate{
-  width:30%;
-  margin:auto;
-  text-align: center;
+  width:100%;
+  margin:3em;
+  text-align: right;
+  font-size: 120%;
+  color:white;
+}
+
+.paginate a {
+  margin-top:3em;
 }
 
 .input-group{
@@ -970,7 +1190,7 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #337ab7;
+  color: white;
   text-decoration: none;
 }
 a:hover,

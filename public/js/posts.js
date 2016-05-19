@@ -6,14 +6,14 @@ var docReady= setInterval(function() {
 		return;
 	}
 
-	clearInterval(docReady);	
+	clearInterval(docReady);
 
-	var addCategoryBtn = document.getElementsByClassName('btn')[0];
+	var addCategoryBtn = document.getElementsByClassName('add-category')[0];
 	addedCategoriesIDs = document.getElementById('categories');
 	addCategoryBtn.addEventListener('click', addCategoryToPost);
 	addedCategoriesText = document.getElementsByClassName('added_categories')[0]
 	for (i = 0; i < addedCategoriesText.firstElementChild.children.length; i++) {
-		addedCategoriesText.firstElementChild.children[i].firstElementChild.addEventListener('click',removeCategoryFromPost);	
+		addedCategoriesText.firstElementChild.children[i].firstElementChild.addEventListener('click',removeCategoryFromPost);
 	}
 },100);
 

@@ -13,7 +13,7 @@ var docReady = setInterval(function() {
 				editSections[i].firstElementChild.firstElementChild.children[2].children[0].addEventListener('click', startDelete);
 		}
 
-		document.getElementsByClassName('btn')[0].addEventListener('click', createNewCategory);
+		document.getElementsByClassName('post-btn')[0].addEventListener('click', createNewCategory);
 },100);
 
 
@@ -25,7 +25,7 @@ function createNewCategory(event) {
 				alert("Please enter a valid category name!");
 				return;
 		}
-	
+
 		ajax("POST", "/admin/blog/category/create", "name=" + name, newCategoryCreated, [name]);
 }
 
@@ -36,6 +36,7 @@ function newCategoryCreated(params, success, responseObj) {
 function startEdit(event) {
 		event.preventDefault();
 		event.target.innerText = "Save";
+		event.target.style.color= "yellow";
 		var li = event.path[2].children[0];
 		li.children[0].value = event.path[4].previousElementSibling.children[0].innerText;
 		li.style.setProperty( "display", "inline-block", "important") ;
@@ -72,7 +73,7 @@ function endEdit(params, success, responseObj) {
         article.style.backgroundColor = "#afefac";
 
         setTimeout(function() {
-            article.style.backgroundColor = "white";
+            article.style.backgroundColor = "initial";
         }, 310);
 
         article.firstElementChild.firstElementChild.innerText = newName;
@@ -118,7 +119,7 @@ function categoryDeleted(params, success, responseObj) {
 
 function ajax(method, url, params, callback, callbackParams) {
 	var http;
- 
+
   if (window.XMLHttpRequest) {
       http = new XMLHttpRequest();
   }
@@ -153,72 +154,3 @@ function ajax(method, url, params, callback, callbackParams) {
   http.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
   http.send(params + "&_token=" + token);
 }
-
-
-
-
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		
-
-

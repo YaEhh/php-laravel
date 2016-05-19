@@ -28,9 +28,9 @@ function endComment(params, success, responseObj) {
 	addedComment.style.display ="block";
 	addedComment.children[0].style.background = "green"
 	setTimeout(function(){
-		addedComment.children[0].style.background = "white"
+		addedComment.children[0].style.background = "initial"
 	},300);
-	addedComment.children[0].children[0].innerText = responseObj['username'] + " posted at " 
+	addedComment.children[0].children[0].innerText = responseObj['username'] + " posted at "
 	+ responseObj['new_comment'].created_at + " : " + responseObj['new_comment'].body;
 	addedComment.className ="single-comment text-center";
 	var newAddedComment = document.createElement('div');
@@ -48,7 +48,7 @@ function endComment(params, success, responseObj) {
 
 function ajax(method, url, params, callback, callbackParams) {
 	var http;
- 
+
   if (window.XMLHttpRequest) {
       http = new XMLHttpRequest();
   }
@@ -56,7 +56,7 @@ function ajax(method, url, params, callback, callbackParams) {
   http.onreadystatechange = function() {
 
       if (http.readyState == XMLHttpRequest.DONE ) {
-      		
+
           if(http.status == 200){
               var obj = JSON.parse(http.responseText);
               callback(callbackParams, true, obj);

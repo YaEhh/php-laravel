@@ -9,7 +9,7 @@
 
 @section('content')
 	@include('includes.info-box')
-	<div class="container">
+	<div class="container contact-front">
 		<form action=" {{ route('contact.send') }}" method="post" id="contact_form">
 			<div class="input-group">
 				<label for="name"> Your Name </label>
@@ -35,7 +35,7 @@
 			<div class="message-box">
 				<textarea name="message" id="message" rows="10">{{ Request::old('message') }}</textarea>
 			</div>
-			<button type="submit" class='btn btn-sm btn-warning'> Submit Message </button>
+			<button type="submit" class='btn contact-sub'> Submit Message </button>
 			<input type="hidden" value="{{ Session::token() }}" name="_token" />
 		</form>
 	</div>

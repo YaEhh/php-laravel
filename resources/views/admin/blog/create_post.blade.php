@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-	<div class="container text-left">
+	<div class="container text-left post-edit">
 		@include('includes.info-box')
 		<form action=" {{ route('admin.blog.post.create') }}" method="post">
 			<div class="input-label">
@@ -29,13 +29,13 @@
 							<option value=" {{ $category->id }}"> {{ $category->name }} </option>
 						@endforeach
 					</select>
-						<button type="button" class=" add-category btn-warning btn-md btn"> Add Category </button>
+						<button type="button" class=" add-category post-btn"> Add Category </button>
 					<div class="added_categories">
 						<ul></ul>
 					</div>
 			</div>
 			<div class="input-group">
-				<input type="hidden" name="categories" id="categories"> 
+				<input type="hidden" name="categories" id="categories">
 			</div>
 			<div class="input-label">
 				<label for="body"> Body </label>
@@ -45,7 +45,7 @@
 				<input type="hidden" name="_token" value="{{ Session::token() }}" />
 			</div>
 			<div class="submit">
-				<button type="submit" name="submit" class="btn btn-md btn-warning"> Submit </button>
+				<button type="submit" name="submit" class="btn post-edit-sub"> Submit </button>
 			</div>
 		</form>
 	</div>

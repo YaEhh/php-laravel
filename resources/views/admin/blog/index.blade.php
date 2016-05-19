@@ -5,23 +5,22 @@
 		@include('includes.info-box')
 		<div class="">
 			<div id="post-admin">
-				<a href=" {{ route('admin.blog.create_post') }}" class="btn btn-warning btn-sm"> New Post </a>
+				<a href=" {{ route('admin.blog.create_post') }}" class="post-btn"> New Post </a>
 			</div>
 				<ul>
 					@if(count($posts) <= 0)
 					<li> No Posts </li>
 					@else
 						@foreach($posts as $post)
-							<article class=" blog-post text-center">
+							<article class=" blog-post">
 								<h4> {{$post->title }} </h4>
 								<span class="subtitle"> {{$post->author }} | {{$post->created_at}} </span>
 								<p> {{$post->body}} </p>
 									<nav>
-			 								<li><a href="{{ route('admin.blog.post', ['post_id' => $post->id, 'end' => 'admin']) }}">View </a> | 
-			 										<a href="{{ route('admin.blog.post.edit', ['post_id' => $post->id]) }}">Edit </a> | 
-			 										<a href="{{ route('admin.blog.post.delete', ['post_id' => $post->id]) }}">Delete </a></li>
+			 								<li><a href="{{ route('admin.blog.post', ['post_id' => $post->id, 'end' => 'admin']) }}"class="dash-links">View </a> |
+			 										<a href="{{ route('admin.blog.post.edit', ['post_id' => $post->id]) }}" class="dash-links">Edit </a> |
+			 										<a href="{{ route('admin.blog.post.delete', ['post_id' => $post->id]) }}" class="dash-links">Delete </a></li>
 			 						</nav>
-								<a href=''> Read more </a>
 							</article>
 						@endforeach
 					@endif
@@ -30,10 +29,14 @@
 				<section class=" col-md-12">
 					<div class="paginate">
 						@if($posts->currentPage() !== 1)
-							<a href="{{ $posts->previousPageUrl() }}"><i class="glyphicon glyphicon-chevron-left"></i></a>
+						<p>
+							Previous Page <a href="{{ $posts->previousPageUrl() }}"><i class="glyphicon glyphicon-chevron-left"></i></a>
+						</p>
 						@endif
 						@if($posts->currentPage() !== $posts->lastPage())
-							<a href="{{ $posts->nextPageUrl() }}"><i class="glyphicon glyphicon-chevron-right"></i></a>
+						<p>
+							Next Page <a href="{{ $posts->nextPageUrl() }}"><i class="glyphicon glyphicon-chevron-right"></i></a>
+						</p>
 						@endif
 					</div>
 				</section>

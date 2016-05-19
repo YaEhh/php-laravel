@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
@@ -13,9 +13,14 @@ use Illuminate\Support\Facades\Response;
 class PostController extends Controller
 {
 
+	public function getIntro()
+	{
+		return view('frontend.blog.intro');
+	}
+
 	public function getBlogIndex()
 	{
-		$posts = Post::paginate(5);
+		$posts = Post::paginate(6);
 		foreach ($posts as $post) {
 			$post->body = $this->shortenText($post->body, 20);
 		}
@@ -26,7 +31,7 @@ class PostController extends Controller
 	{
 		$post = Post::find($post_id);
 		$comments = $post->comments;
-		if (!$post) 
+		if (!$post)
 		{
 			return redirect()->route('blog.index')->with(['fail' => 'Post not found!']);
 		}
@@ -53,9 +58,9 @@ class PostController extends Controller
 	}
 
 
-	public function getCreatePost() 
+	public function getCreatePost()
 	{
-		$categories = Category::all(); 
+		$categories = Category::all();
 		return view("admin.blog.create_post", ['categories' => $categories]);
 
 	}
@@ -86,9 +91,12 @@ class PostController extends Controller
 	}
 
 
-	public function getPostIndex() 
+	public function getPostIndex()
 	{
-		$posts = Post::paginate(5);
+		$posts = Post::paginate(6);
+		foreach ($posts as $post) {
+			$post->body = $this->shortenText($post->body, 20);
+		}
 		return view('admin.blog.index', ['posts' => $posts]);
 	}
 
@@ -106,7 +114,7 @@ class PostController extends Controller
 				$i++;
 		}
 
-		if (!$post) 
+		if (!$post)
 		{
 			return redirect()->route('blog.index')->with(['fail' => 'Post not found!']);
 		}
@@ -115,7 +123,7 @@ class PostController extends Controller
 	}
 
 
-	public function postUpdatePost(Request $request) 
+	public function postUpdatePost(Request $request)
 	{
 		$this->validate($request, [
 			'title' => 'required|max:120',
@@ -165,9 +173,3 @@ class PostController extends Controller
 
 
 }
-
-
-
-
-
-

@@ -3,26 +3,27 @@
 @section('content')
 <div class="container">
 		<div class="">
-			@if (count($contact_messages) == 0) 
+			@if (count($contact_messages) == 0)
 				No messages
 			@endif
 			@foreach($contact_messages as $contact_message)
-				<article class="contact-message text-center" data-message="{{ $contact_message->body }}" data-id="{{ $contact_message->id }}" >
+				<article class="contact-message" data-message="{{ $contact_message->body }}" data-id="{{ $contact_message->id }}" >
 					<div class="message-info">
 						<h4> {{ $contact_message->subject }} </h4>
 						<span class="info">Sender: {{$contact_message->sender}} | {{$contact_message->created_at }}</span>
 					</div>
-					<br>
+					<hr />
 					<div class="edit">
 						<nav>
 							<ul>
-								<li> <a href=""/> Show Message </a> </li>
-								<li> <a href=""/> Delete </a> </li>
+								<li> <a href="" class="post-btn"/> Show Message </a> </li>
+								<li> <a href="" class="post-btn"/> Delete </a> </li>
 							</ul>
 						</nav>
 					</div>
+
 				</article>
-				<hr>
+
 			@endforeach
 		</div>
 		<br>
@@ -47,7 +48,7 @@
 @section('scripts')
 	<script type="text/javascript">
 		var token = "{{ Session::token() }}";
-	</script> 
+	</script>
 	<script type="text/javascript" src="{{ asset('js/modal.js') }}"></script>
 	<script type="text/javascript" src="{{ asset('js/contact_messages.js') }}"></script>
 @endsection

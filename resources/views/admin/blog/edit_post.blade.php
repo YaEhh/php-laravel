@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-	<div class="container text-left">
+	<div class="container text-left post-edit">
 		@include('includes.info-box')
 		<form action=" {{ route('admin.blog.post.update') }}" method="post">
 			<div class="input-label">
@@ -29,7 +29,7 @@
 							<option value=" {{ $category->id }}"> {{ $category->name }} </option>
 						@endforeach
 					</select>
-						<button type="button" class=" add-category btn-warning btn-md btn"> Add Category </button>
+						<button type="button" class=" add-category post-btn"> Add Category </button>
 					<div class="added_categories">
 						<ul>
 							@foreach($post_categories as $post_category)
@@ -48,7 +48,7 @@
 				<input type="hidden" name="post_id" value="{{ $post->id }}" />
 			</div>
 			<div class="submit">
-				<button type="submit" name="submit" class="btn btn-md btn-warning"> Save </button>
+				<button type="submit" name="submit" class="btn post-edit-sub"> Save </button>
 			</div>
 		</form>
 	</div>

@@ -1,0 +1,50 @@
+@font-face {
+    font-family: FontAwesome;
+    src: url('fontawesome-webfont.ttf');
+}
+
+@font-face {
+    font-family: Variane;
+    src: url('variane-script.ttf');
+}
+
+@font-face {
+    font-family: blackjack;
+    src: url('blackjack.otf');
+}
+
+html{
+  background-size:100%;
+  background-image: url(../images/blog.jpg);
+  font-family: FontAwesome;
+  background-repeat: no-repeat;
+}
+
+.intro-link{
+  text-decoration: none;
+  color:white;
+  font-size: 120%;
+  position:relative;
+  left:500px;
+  top:210px;
+  display:none;
+  -webkit-transition: all ease 2s;
+  font-family: FontAwesome !important;
+  text-shadow:2px 2px 1px black;
+}
+
+.intro-link:hover{
+  /*border: 1px solid darkblue;*/
+  /*color:grey;*/
+}
+
+.intro-head{
+  font-family: blackjack;
+  color:white;
+  font-size: 500%;
+  width:40%;
+  padding-left:9em;
+  text-align:center;
+  margin-top:5px;
+  text-shadow:10px 10px 5px black;
+}

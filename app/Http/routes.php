@@ -14,8 +14,8 @@
 Route::group(['middleware' => 'web'], function() {
 
 	Route::get('/', [
-		'uses' => 'PostController@getBlogIndex',
-		'as' => 'blog.index'
+		'uses' => 'PostController@getIntro',
+		'as' => 'intro'
 	]);
 
 	Route::get('/blog', [
@@ -35,7 +35,7 @@ Route::group(['middleware' => 'web'], function() {
 
 	Route::get('/about', ['as' => 'about', function() {
 		return view('frontend.other.about');
-	}]); 
+	}]);
 
 	Route::get('/contact',[
 		'uses' => 'ContactMessageController@getContactIndex',
@@ -85,7 +85,7 @@ Route::group(['middleware' => 'web'], function() {
 	Route::group([
 		'prefix' => '/admin',
 		'middleware' => 'auth'
-		
+
 	], function() {
 
 		Route::get('/', [
@@ -97,7 +97,7 @@ Route::group(['middleware' => 'web'], function() {
 			'uses' => 'PostController@getCreatePost',
 			'as' => 'admin.blog.create_post'
 		]);
- 
+
 		Route::post('blog/post/create', [
 			'uses' => "PostController@PostCreatePost",
 			'as' => 'admin.blog.post.create'
@@ -109,7 +109,7 @@ Route::group(['middleware' => 'web'], function() {
 		]);
 
 		Route::get('/blog/post/{post_id}&{end}',[
-			'uses' => 'PostController@getSinglePost', 
+			'uses' => 'PostController@getSinglePost',
 			'as' => 'admin.blog.post'
 		]);
 
@@ -167,7 +167,3 @@ Route::group(['middleware' => 'web'], function() {
 	});
 
 });
-
-
-
-

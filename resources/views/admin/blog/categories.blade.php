@@ -4,10 +4,10 @@
 	<div class="container">
 		<div class="category-admin">
 			<form action=" {{ route('admin.blog.category.create') }}" method="post">
-				<div class="input-group">
+				<div class="input-group cat-create">
 						<label for=""> Category Name </label>
 						<input name="name" id="name" type="text"/>
-						<button type="submit" name="submit" class="btn btn-sm btn-warning">Create a Category</button>
+						<button type="submit" name="submit" class=" post-btn">Create a Category</button>
 				</div>
 			</form>
 		</div>
@@ -27,6 +27,7 @@
 						</nav>
 					</div>
 				</article>
+				<hr />
 			@endforeach
 		</div>
 		<br>
@@ -34,10 +35,14 @@
 				<section class=" col-md-12 text-center" >
 					<div class="paginate">
 						@if($categories->currentPage() !== 1)
-							<a href="{{ $categories->previousPageUrl() }}"><i class="glyphicon glyphicon-chevron-left"></i></a>
+						<p>
+							Previous page	<a href="{{ $categories->previousPageUrl() }}"><i class="glyphicon glyphicon-chevron-left"></i></a>
+						</p>
 						@endif
 						@if($categories->currentPage() !== $categories->lastPage())
-							<a href="{{ $categories->nextPageUrl() }}"><i class="glyphicon glyphicon-chevron-right"></i></a>
+						<p>
+							Next page	<a href="{{ $categories->nextPageUrl() }}"><i class="glyphicon glyphicon-chevron-right"></i></a>
+						</p>
 						@endif
 					</div>
 				</section>
@@ -48,7 +53,6 @@
 @section('scripts')
 	<script type="text/javascript">
 		var token = "{{ Session::token() }}";
-	</script> 
+	</script>
 	<script type="text/javascript" src="{{ asset('js/categories.js') }}"></script>
 @endsection
-
