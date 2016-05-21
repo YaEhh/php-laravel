@@ -37,7 +37,7 @@ body{
 
 .my-nav2-list{
   list-style-type: none;
-  width:450px;
+  width:500px;
   padding-left: 0;
   height:inherit;
   margin:auto;
@@ -83,7 +83,7 @@ body{
 .single-comment{
   list-style-type: none;
   color:white;
-  text-shadow: 1px 1px 1px black;
+  text-shadow: 2px 2px 2px black;
 }
 
 .comment-body{
@@ -133,14 +133,19 @@ body{
   width:50%;
 }
 
+.login input, .login textarea{
+  color:black;
+}
+
 .blog-post{
   padding:0.5em;
   width:33%;
+  height:250px;
   margin: 0.5em auto;
   float:left;
-  width:25%
   color:white;
   font-size:125%;
+  margin-bottom:3em;
 }
 
 .blog-post-wrapper{

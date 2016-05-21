@@ -2,9 +2,9 @@
 
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
-use App\Admin;
+use App\User;
 
-class AdminTableSeeder extends Seeder {
+class UserTableSeeder extends Seeder {
 
 	/**
 	 * Run the database seeds.
@@ -15,7 +15,7 @@ class AdminTableSeeder extends Seeder {
 	{
 		Model::unguard();
 
-		$admin = new Admin();
+		$admin = new User();
 		$admin->email = 'test@test.com';
 		$admin->password = bcrypt('test');
 		$admin->save();

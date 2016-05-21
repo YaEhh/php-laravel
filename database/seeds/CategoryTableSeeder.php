@@ -17,15 +17,27 @@ class CategoryTableSeeder extends Seeder {
 		Model::unguard();
 
 		$category = new Category();
-		$category->name = "Tech";
+		$category->name = "European";
 		$category->save();
 
 		$category = new Category();
-		$category->name = "Sports";
+		$category->name = "Asian";
 		$category->save();
 
 		$category = new Category();
-		$category->name = "Food";
+		$category->name = "South American";
+		$category->save();
+
+		$category = new Category();
+		$category->name = "North American";
+		$category->save();
+
+		$category = new Category();
+		$category->name = "African";
+		$category->save();
+
+		$category = new Category();
+		$category->name = "South American";
 		$category->save();
 
 

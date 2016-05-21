@@ -49,7 +49,7 @@
 				 </div>
 			 </div>
 		<div class="card-container col-xs-6">
-			<div class="card"
+			<div class="card">
 				 	<header>
 				 		<nav>
 				 			<ul class="post-btn-msg">
