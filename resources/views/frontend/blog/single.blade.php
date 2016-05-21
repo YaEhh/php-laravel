@@ -43,7 +43,7 @@
 				<div class="comments text-center">
 					<form action=" " method="post">
 						<div class="input-label">
-							<label for="body"> Enter comment e </label>
+							<label for="body"> Enter comment </label>
 						</div>
 						<div class="input-group">
 							<input type="text" name="body" id="body" {{$errors->has('body') ? 'class=has-error' : ''}} value="{{Request::old('body') ? Request::old('body') : "" }}" />
