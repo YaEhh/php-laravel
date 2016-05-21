@@ -7,9 +7,8 @@
   	<title>Blog</title>
 
   	<link href="{{ asset('/css/intro.css') }}" rel="stylesheet">
-  	<link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
-    <!-- <link rel="stylesheet" href="{{ asset('../public/fonts/font-awesome-4.6.3/css/font-awesome.min.css') }}"> -->
+    <link rel="stylesheet" href="{{ asset('http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('../public/fonts/font-awesome-4.6.3/css/font-awesome.min.css') }}">
   </head>
   <body>
     <h1 class="intro-head"> WanderMunch </h1>
@@ -19,5 +18,5 @@
   </body>
 
 
-  <script type="text/javascript" src="{{ asset('js/intro.js')}}"></script>
+  <script type="text/javascript" src="{{ URL::asset('js/intro.js')}}"></script>
 </html>
