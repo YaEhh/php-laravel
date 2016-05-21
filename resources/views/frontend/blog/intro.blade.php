@@ -18,5 +18,5 @@
   </body>
 
 
-  <script type="text/javascript" src="{{ URL::asset('js/intro.js')}}"></script>
+  <script type="text/javascript" src="{{ asset('js/intro.js')}}"></script>
 </html>
