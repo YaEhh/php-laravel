@@ -31,6 +31,10 @@
   -webkit-transition:background-color .8s;
   width:75%;
 }
+
+.edit{
+  height:50px;
+}
 .edit a{
   display:inline-block;
   float:left;
@@ -302,6 +306,7 @@ li.category-edit input {
   padding:1em;
   transition: background-color 0.5s;
   padding-bottom: 2em;
+  border-bottom: 1px solid white;
 }
 
 .category-list .edit li{

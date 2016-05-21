@@ -10,9 +10,8 @@
 				<article class="contact-message" data-message="{{ $contact_message->body }}" data-id="{{ $contact_message->id }}" >
 					<div class="message-info">
 						<h4> {{ $contact_message->subject }} </h4>
-						<span class="info">Sender: {{$contact_message->sender}} | {{$contact_message->created_at }}</span>
 					</div>
-					<hr />
+						<span class="info">Sender: {{$contact_message->sender}} | {{$contact_message->created_at }}</span>
 					<div class="edit">
 						<nav>
 							<ul>
@@ -21,7 +20,6 @@
 							</ul>
 						</nav>
 					</div>
-
 				</article>
 
 			@endforeach

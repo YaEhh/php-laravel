@@ -27,7 +27,6 @@
 						</nav>
 					</div>
 				</article>
-				<hr />
 			@endforeach
 		</div>
 		<br>
