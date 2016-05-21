@@ -1,5 +1,12 @@
 <?php
 
+$url = parse_url(getenv("postgres://isgfkwfoovoznj:sJOIdETUBHz7p85fezXjg7o7hH@ec2-54-243-200-159.compute-1.amazonaws.com:5432/dcp1isqs3r6oj8"));
+
+$host = $url["localhost"];
+$username = $url["postgres"];
+$password = $url[""];
+$database = substr($url["path"], 1);
+
 return [
 
 	/*
@@ -25,6 +32,7 @@ return [
 	| you may use many connections at once using the Database library.
 	|
 	*/
+
 
 	'default' => 'pgsql',
 
@@ -54,10 +62,10 @@ return [
 
 		'mysql' => [
 			'driver'    => 'mysql',
-			'host'      => env('DB_HOST', 'localhost'),
-			'database'  => env('DB_DATABASE', 'blog'),
-			'username'  => env('DB_USERNAME', 'root'),
-			'password'  => env('DB_PASSWORD', 'sebi'),
+			'host'      => $host,
+			'database'  => $database,
+			'username'  => $username,
+			'password'  => $password,
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
