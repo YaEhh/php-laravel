@@ -7,7 +7,6 @@
   	<title>Blog</title>
 
   	<link href="{{ asset('/css/intro.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css')}}">
     <link rel="stylesheet" href="{{ asset('../public/fonts/font-awesome-4.6.3/css/font-awesome.min.css') }}">
   </head>
   <body>
