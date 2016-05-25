@@ -113,7 +113,6 @@ return [
 		/*
 		 * Laravel Framework Service Providers...
 		 */
-		'Barryvdh\Debugbar\ServiceProvider',
 		'Illuminate\Foundation\Providers\ArtisanServiceProvider',
 		'Illuminate\Auth\AuthServiceProvider',
 		'Illuminate\Bus\BusServiceProvider',
@@ -142,6 +141,7 @@ return [
 		/*
 		 * Application Service Providers...
 		 */
+		'Barryvdh\Debugbar\ServiceProvider',
 		'App\Providers\AppServiceProvider',
 		'App\Providers\BusServiceProvider',
 		'App\Providers\ConfigServiceProvider',
