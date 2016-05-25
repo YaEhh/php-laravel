@@ -68,9 +68,9 @@ return [
 
 		'pgsql' => [
 			'driver'   => 'pgsql',
-			'host'     => env('DB_HOST', 'localhost'),
-			'database' => env('DB_DATABASE', 'blog'),
-			'username' => env('DB_USERNAME', 'postgres'),
+			'host'     => env('DB_HOST', 'ec2-54-243-203-87.compute-1.amazonaws.com'),
+			'database' => env('DB_DATABASE', 'dcqrpecq2heruh'),
+			'username' => env('DB_USERNAME', 'hdvucpogeiybkf'),
 			'password' => env('DB_PASSWORD', ''),
 			'charset'  => 'utf8',
 			'prefix'   => '',
