@@ -167,3 +167,6 @@ Route::group(['middleware' => 'web'], function() {
 	});
 
 });
+
+$router->get( '/_debugbar/assets/stylesheets', '\Barryvdh\Debugbar\Controllers\AssetController@css' );
+$router->get( '/_debugbar/assets/javascript', '\Barryvdh\Debugbar\Controllers\AssetController@js' );
