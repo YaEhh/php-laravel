@@ -135,13 +135,14 @@ return [
 		'Illuminate\Translation\TranslationServiceProvider',
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
+		'Barryvdh\Debugbar\ServiceProvider',
 
 
 
 		/*
 		 * Application Service Providers...
 		 */
-		'Barryvdh\Debugbar\ServiceProvider',
+
 		'App\Providers\AppServiceProvider',
 		'App\Providers\BusServiceProvider',
 		'App\Providers\ConfigServiceProvider',
