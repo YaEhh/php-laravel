@@ -6,7 +6,7 @@
   	<meta name="viewport" content="width=device-width, initial-scale=1">
   	<title>Blog</title>
 
-  	<link href="/css/intro.css" rel="stylesheet">
+  	<link href="//css/intro.css" rel="stylesheet">
     <link rel="stylesheet" href="../public/fonts/font-awesome-4.6.3/css/font-awesome.min.css">
   </head>
   <body>
